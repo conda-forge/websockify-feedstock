@@ -32,7 +32,7 @@ requirements:
     - python
     - requests
     - jwcrypto
-    - redis
+    - redis-py
     - simplejson
 
 test:
