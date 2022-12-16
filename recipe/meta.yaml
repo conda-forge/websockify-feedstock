@@ -30,6 +30,10 @@ requirements:
   run:
     - numpy
     - python
+    - requests
+    - jwcrypto
+    - redis
+    - simplejson
 
 test:
   imports:
