@@ -1,5 +1,5 @@
 {% set name = "websockify" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/novnc/websockify/archive/v{{ version }}.tar.gz
-  sha256: 628dd586e80865cd775cc402b96cf75f4daa647b0fefdc31366d08b7753016be
+  sha256: 37448ec992ef626f29558404cf6535592d02894ec1d5f0990a8c62621b39a967
 
 build:
   # Independent of Python version, but rebind.so depends on OS
-  number: 2
+  number: 0
   entry_points:
     - websockify = websockify.websocketproxy:websockify_init
   script: {{ PYTHON }} -m pip install . -vv  # [win]
@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}  # [linux]
+    - {{ stdlib("c") }}    # [linux]
     - make  # [linux]
   host:
     - pip
