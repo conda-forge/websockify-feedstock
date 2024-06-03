@@ -34,7 +34,6 @@ requirements:
     - requests
     - jwcrypto
     - redis-py
-    - simplejson
 
 test:
   imports:
