@@ -30,6 +30,7 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
   run:
     - numpy
     - python
